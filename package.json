@@ -1,0 +1,24 @@
+{
+  "name": "react-native-ka-kao-signin",
+  "version": "1.0.0",
+  "description": "Kakao Signin Module for React Native",
+  "main": "index.js",
+  "author": "sunyrora",
+  "license": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sunyrora/react-native-kakao-signin.git"
+  },
+  "peerDependencies": {
+    "react-native": "^0.43.3"
+  },
+  "keywords": [
+    "react-native",
+    "firebase",
+    "kakao login",
+    "kakao signin"
+  ]
+}
