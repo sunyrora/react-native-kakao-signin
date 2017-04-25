@@ -5,13 +5,14 @@
 
 `$ npm install react-native-kakao-signin --save`
 
-### Mostly automatic installation
-
-`$ react-native link react-native-kakao-signin`
-
 or
 
 `$ yarn add react-native-kakao-signin`
+
+
+### Mostly automatic installation
+
+`$ react-native link react-native-kakao-signin`
 
 
 ## Kakao Environment for your Project
