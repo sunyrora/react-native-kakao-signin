@@ -14,8 +14,9 @@ or
 `$ yarn add react-native-kakao-signin`
 
 
-## Kakao Environment for your App
+## Kakao Environment for your Project
 [IOS guid](https://developers.kakao.com/docs/ios#시작하기-개발환경-구성)
+
 [Android guid](https://developers.kakao.com/docs/android#시작하기-개발환경-구성)
 
 ### Manual installation
@@ -31,11 +32,12 @@ or
 ***
 * Your Project
 	* Build Setting 
-	- Header Search Paths: 
+		* Header Search Paths: 
 	$(PROJECT_DIR)/../node_modules/react-native-kakao-signin/ios
-	- Framework search Paths
+		* Framework search Paths
 	$(PROJECT_DIR)/../node_modules/react-native-kakao-signin/ios
 
+***
 
 	* 'AppDelegate.m'
 ```js
@@ -87,8 +89,7 @@ or
 ***
 
 * Your Project
-
- * 'MainApplication.java'
+	* 'MainApplication.java'
 ```js
 import com.sunyrora.kakaosignin.RNKaKaoSigninPackage;
 
@@ -120,25 +121,25 @@ async onSignInKakao() {
 		const res = await KakaoSignin.signIn();
 		const resBody = await res.json();
 
-		// return values
-		/*
-		{
-			id,
-			kaccount_email,
-			
-			// properties can be null if there are no data from the server
-			properties: {
-				profile_image,
-				nickname
-			}
-		}
-		*/
-
 	} catch(err) {
 		//Error handle..
 		console.log("Login Error!!", err);
 	}
 }
+```
+
+* return values
+```
+	{
+		id,
+		kaccount_email,
+		
+		// properties can be null if there is no data from the server
+		properties: {
+			profile_image,
+			nickname
+		}
+	}
 ```
 
 
