@@ -9,6 +9,10 @@
 
 `$ react-native link react-native-kakao-signin`
 
+or
+
+`$ yarn add react-native-kakao-signin`
+
 
 ## Kakao Environment for your App
 [IOS guid](https://developers.kakao.com/docs/ios#시작하기-개발환경-구성)
