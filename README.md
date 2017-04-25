@@ -115,7 +115,7 @@ public class MainApplication extends Application implements ReactApplication {
 import KakaoSignin from 'react-native-kakao-signin'; 
 
 async onSignInKakao() {
-	// other code ...
+	// 
 
 	try {
 		const res = await KakaoSignin.signIn();
@@ -148,7 +148,6 @@ async onSignInKakao() {
 
 import KakaoSignin from 'react-native-kakao-signin'; 
 
-// TODO: What to do with the module?
 async onSignOutKakao() {
 	// .....
 	try {
