@@ -128,7 +128,7 @@ async onSignInKakao() {
 }
 ```
 
-* return values
+* return values(resBody)
 ```
 	{
 		id,
