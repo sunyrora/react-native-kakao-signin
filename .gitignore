@@ -52,5 +52,4 @@ buck-out/
 
 #vscode
 .vscode/
-._*
-      
+*._*
