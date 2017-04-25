@@ -1,6 +1,6 @@
 {
   "name": "react-native-kakao-signin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Kakao Signin Module for React Native",
   "main": "index.js",
   "author": "sunyrora",
