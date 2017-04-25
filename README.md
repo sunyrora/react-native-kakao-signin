@@ -32,6 +32,8 @@ or
 ***
 * Your Project
 	* Build Setting 
+		* Other Linker Flags:
+		-force_load $(PROJECT_DIR)/../node_modules/react-native-kakao-signin/ios/KakaoOpenSDK.framework/KakaoOpenSDK
 		* Header Search Paths: 
 	$(PROJECT_DIR)/../node_modules/react-native-kakao-signin/ios
 		* Framework search Paths
@@ -89,6 +91,24 @@ or
 ***
 
 * Your Project
+	* AndroidManifest.xml
+	```
+	<meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+
+	```
+	* res/values/string.xml
+	```
+	<string name="kakao_app_key">{your kakao app key}</string>
+	```
+	* build.gradle(project)
+	```
+	repositories {
+        mavenLocal()
+        maven { url 'http://devrepo.kakao.com:8088/nexus/content/groups/public/' }
+    }
+	```
 	* 'MainApplication.java'
 ```js
 import com.sunyrora.kakaosignin.RNKaKaoSigninPackage;
