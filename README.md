@@ -9,6 +9,11 @@
 
 `$ react-native link react-native-kakao-signin`
 
+
+## Kakao Environment for your App
+[IOS guid](https://developers.kakao.com/docs/ios#시작하기-개발환경-구성)
+[Android guid](https://developers.kakao.com/docs/android#시작하기-개발환경-구성)
+
 ### Manual installation
 
 
@@ -18,6 +23,48 @@
 2. Go to `node_modules` ➜ `react-native-kakao-signin` and add `RNKaKaoSignin.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libRNKaKaoSignin.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
+
+***
+* Your Project
+	* Build Setting 
+	- Header Search Paths: 
+	$(PROJECT_DIR)/../node_modules/react-native-kakao-signin/ios
+	- Framework search Paths
+	$(PROJECT_DIR)/../node_modules/react-native-kakao-signin/ios
+
+
+	* 'AppDelegate.m'
+```js
+
+#import <KakaoOpenSDK/KakaoOpenSDK.h>
+...
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+                                       sourceApplication:(NSString *)sourceApplication
+                                              annotation:(id)annotation {
+    ...
+    if ([KOSession isKakaoAccountLoginCallback:url]) {
+        return [KOSession handleOpenURL:url];
+    }
+    ...
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+                                                 options:(NSDictionary<NSString *,id> *)options {
+    ...
+    if ([KOSession isKakaoAccountLoginCallback:url]) {
+        return [KOSession handleOpenURL:url];
+    }
+    ...    
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    [KOSession handleDidBecomeActive];
+}
+
+```
+
 
 #### Android
 
@@ -32,7 +79,30 @@
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
   	```
       compile project(':react-native-kakao-signin')
-  	```
+
+***
+
+* Your Project
+
+ * 'MainApplication.java'
+```js
+import com.sunyrora.kakaosignin.RNKaKaoSigninPackage;
+
+public class MainApplication extends Application implements ReactApplication {
+
+ ....
+
+    @Override
+    protected List<ReactPackage> getPackages() {
+      return Arrays.<ReactPackage>asList(
+          new MainReactPackage(),
+          new RNKaKaoSigninPackage() // <=== add this
+      );
+    }
+}
+
+```
+
 
 ## Usage - SigIn
 ```javascript
