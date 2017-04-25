@@ -109,7 +109,7 @@ public class MainApplication extends Application implements ReactApplication {
 ```
 
 
-## Usage - SigIn
+## Usage - SignIn
 ```javascript
 
 import KakaoSignin from 'react-native-kakao-signin'; 
@@ -143,7 +143,7 @@ async onSignInKakao() {
 ```
 
 
-## Usage - SigOut
+## Usage - SignOut
 ```javascript
 
 import KakaoSignin from 'react-native-kakao-signin'; 
