@@ -16,9 +16,9 @@ or
 
 
 ## Kakao Environment for your Project
-[IOS guid](https://developers.kakao.com/docs/ios#시작하기-개발환경-구성)
+[IOS guide](https://developers.kakao.com/docs/ios#시작하기-개발환경-구성)
 
-[Android guid](https://developers.kakao.com/docs/android#시작하기-개발환경-구성)
+[Android guide](https://developers.kakao.com/docs/android#시작하기-개발환경-구성)
 
 ### Manual installation
 
